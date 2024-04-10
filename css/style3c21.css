@@ -1,0 +1,480 @@
+/*!
+Theme Name: LA_general_theme
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: la_general_theme
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+LA_general_theme is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+	 ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+ body{
+       width:100vw;
+       overflow-x:hidden;
+ }
+ body:not(.loaded) .second_stage{
+   width: 100vw!important;
+   left:0!important;
+       max-width: none!important;
+       background: rgba(255,103,103,1.00);
+       z-index: 100;
+ }
+ body:not(.loaded) .logo{
+   opacity:0;
+ }
+ .logo{
+   transition: opacity 0.66s ease 0.66s!important;
+ }
+ .second_stage, .second_stage *{
+   transition:all 0.66s ease;
+ }
+ body:not(.loaded) .logo {
+    position: absolute;
+    top: 10vh;
+    right: 27vw;
+    width: 210px;
+    height: auto;
+    z-index: 10;
+}
+body:not(.loaded) .logos_holder .gif {
+    position: absolute;
+    bottom: 5vh;
+    left: 30vw;
+    width: 37vw;
+    height: auto;
+}
+ body *{
+   margin:0;
+   padding:0;
+ }
+.montserrat{
+   	 font-family: 'montserrat', sans-serif!important;
+}
+.montserrat-bold{
+   	 font-family: 'montserrat-bold', sans-serif!important;
+}
+.montserrat-extrabold{
+   	 font-family: 'montserrat-extrabold', sans-serif!important;
+}
+.montserrat-semibold{
+   	 font-family: 'montserrat-semibold', sans-serif!important;
+}
+.gotham-black{
+   	 font-family: 'gotham-black', sans-serif!important;
+}
+.gotham-bold{
+   	 font-family: 'gotham-bold', sans-serif!important;
+}
+.gotham-ultra{
+   	 font-family: 'gotham-ultra', sans-serif!important;
+}
+.thirsty{
+   	 font-family: 'thirsty', sans-serif!important;
+}
+.adobe{
+   	 font-family: 'adobe', sans-serif!important;
+}
+body{
+  background-color: rgba(255,103,103,1.00);
+}
+body *{
+  outline:none;
+  color:inherit;
+}
+.checked img.dipu{
+   -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  filter: opacity(100%);
+
+}
+div.diputado_img{
+  background-color: rgba(255,103,103,1.00);
+
+}
+
+img.dipu {
+  width: 80px;
+  height: auto;
+  -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  filter: opacity(50%);
+}
+.paso.activo a{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.paso.inactivo a{
+  text-decoration: none;
+  filter: opacity(50%);
+
+}
+.logo{
+  position: absolute;
+  top:10vh;
+  right:10vw;
+ width:210px;
+ height:auto;
+ z-index:10;
+}
+.logos_holder{
+  position:relative;
+  height:100vh;
+}
+.logos_holder .gif {
+    position: absolute;
+    bottom: 5vh;
+    left: -2vw;
+    width: 37vw;
+    height: auto;
+}
+ .col{
+   transition:all 0.66s linear;
+   max-width:50vw;
+ }
+body div.zerowidth{
+  width: 0px!important;
+    max-width: 0px!important;
+    overflow: hidden;
+    min-height: 0px!important;
+    padding: 0!important;
+}
+.first_stage{
+  padding:10vh 5vw!important;
+}
+ h2{
+  margin-bottom:30px;
+  font-size:35px;
+  line-height:45px;
+}
+.slide p{
+  margin-top:30px;
+}
+.slider.slick-initialized{
+  height: auto;
+padding-bottom: 30px;
+}
+.slick-dots{
+  text-align:left!important;
+}
+.slick-dots li button:before{
+  font-size:15px;
+  opacity:1;
+  color:black;
+}
+.slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: white;
+}
+.flexi{
+  display: flex;
+align-items: center;
+margin-top:60px;
+}
+.flexi .part{
+  display: flex;
+align-items: center;
+margin-right:15px;
+cursor:pointer;
+}
+.flexi .part .fa{
+  font-size: 50px;
+margin-right: 10px;
+}
+.third_stage{
+  padding:10vh 5vw!important;
+}
+.flexi img{
+  width:60px;
+  height:60px;
+  margin-right:25px;
+}
+.first_stage,
+.third_stage{
+  transition:opacity 0s!important;
+}
+.first_stage, .second_stage, .third_stage{
+  position:fixed;
+  top:0!important;
+  width:50vw;
+  height:100vh;
+  transition:all 0.66s ease!important;
+}
+.first_stage{
+  left:0!important;
+}
+.formular .first_stage{
+  left:-50vw!important;
+}
+.second_stage{
+  left:50vw!important;
+}
+.formular .second_stage{
+  left:0!important;
+}
+.third_stage{
+  left:100vw!important;
+}
+.formular .third_stage{
+  left:50vw!important;
+}
+.third_stage, .first_stage{
+  display:flex;flex-flow:column;
+}
+.fulled{
+  flex:1 auto;
+}
+.paso_container{
+  margin-top:30px;
+}
+label{
+  padding-bottom: 5px;
+    display: inline-block;
+}
+.select-wrapper{
+  background: black;
+    border-radius: 10px;
+    padding: 0 15px;
+    color: white;
+    width: 350px;
+    max-width:100%;
+}
+.select-wrapper span.caret {
+    color: white;
+    position: absolute;
+    right: 15px;
+    top: 0;
+    bottom: 0;
+    height: 10px;
+    margin: auto 0;
+    font-size: 10px;
+    line-height: 10px;
+}
+.select-wrapper input.select-dropdown {
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-bottom: none;
+    outline: none;
+    height: 3rem;
+    line-height: 3rem;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0 0 20px 0;
+    padding: 0;
+    display: block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.diputados{
+  display: flex;
+flex-wrap: wrap;
+}
+.diputados h3{
+  font-size: 15px;
+}
+.diputado{
+  width: 82px;
+    margin: 20px 20px 0 0;
+    transition:all 0.66s ease;
+    cursor:pointer;
+}
+.diputado_img{
+  border:2px solid black;
+  margin-bottom:7px;
+      height: 82px;
+}
+.diputado_img img{
+  width:100%!important;
+}
+.diputado.checked .diputado_img{
+  border:2px solid white;
+}
+.diputado *{
+transition:all 0.66s ease 0s!important;
+}
+.diputado.checked{
+  color:white;
+}
+input[type="button"]{
+  border: none;
+background: black;
+color: white;
+padding: 5px 15px;
+border-radius: 13px;
+text-transform: uppercase;
+font-family: 'montserrat-bold', sans-serif!important;
+letter-spacing: 1px;
+margin-top: 30px;
+}
+.fake_twitter{
+  padding: 15px 20px;
+margin: 15px 0;
+border-radius: 13px;
+color:white;
+}
+.nombre_user{
+  border: none!important;
+  background: black;
+  text-transform:uppercase;
+  color: rgba(255,103,103,1.00);
+}
+.nombre_user::placeholder{
+text-transform:uppercase;
+      color: rgba(255,103,103,1.00);
+}
+.fa-home{
+  font-size:65px!important;
+}
+@media(max-width:760px){
+  .row{
+    display: flex;
+flex-flow: column-reverse;
+  }
+  .first_stage{
+    position: static;
+    top: auto!important;
+    left: auto!important;
+    width: 100vw;
+    height: auto;
+    max-width: none;
+  }
+  .second_stage{
+    position: static;
+    top: auto!important;
+    left: auto!important;
+    width: 100vw;
+    height: 50vh;
+    max-width: none;
+  }
+  .logo {
+    position: absolute;
+    top: 5vh;
+    right: 10vw;
+    width: 33vw;
+    height: auto;
+    z-index: 10;
+}
+
+.logos_holder .gif {
+    position: absolute;
+    bottom: auto;
+    left: 0vw;
+    width: auto;
+    height: 46vh;
+    top: 15vh;
+}
+h2 {
+    margin-bottom: 30px;
+    font-size: 25px;
+    line-height: 30px;
+}
+.flexi .part {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.flexi {
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+.third_stage{
+  width: 100vw!important;
+  background: rgba(255,103,103,1.00);
+  max-width: none;
+}
+.formular .third_stage {
+    left: 0vw!important;
+    width: 100vw!important;
+    background: rgba(255,103,103,1.00);
+    max-width: none;
+    z-index:11;
+    overflow-y:scroll;
+    padding-bottom:30px;
+}
+body:not(.loaded) .second_stage{
+  width: 100vw!important;
+  height:100vh;
+  left:0!important;
+      max-width: none!important;
+      background: rgba(255,103,103,1.00);
+      z-index: 100;
+}
+body:not(.loaded) .logo{
+  opacity:0;
+}
+.logo{
+  transition: opacity 0.66s ease 0.66s!important;
+}
+.second_stage, .second_stage *{
+  transition:all 0.66s ease;
+}
+body:not(.loaded) .logo {
+   position: absolute;
+   top: 10vh;
+   right: 27vw;
+   width: 230px;
+   height: auto;
+   z-index: 10;
+}
+body:not(.loaded) .logos_holder .gif {
+   position: absolute;
+   bottom: 5vh;
+   left: 30vw;
+   width: 37vw;
+   height: auto;
+}
+}
